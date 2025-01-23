@@ -1,7 +1,8 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'dart:convert';
 import 'add_hero_page.dart';
+import 'edit_hero_page.dart';
 import 'hero_detail_page.dart';
 
 class HeroListPage extends StatefulWidget {
@@ -102,6 +103,17 @@ class _HeroListPageState extends State<HeroListPage> {
                 trailing: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
+                    IconButton(
+                      icon: const Icon(Icons.edit, color: Colors.blue),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => EditHeroPage(hero: hero),
+                          ),
+                        ).then((value) => fetchHeroes());
+                      },
+                    ),
                     IconButton(
                       icon: const Icon(Icons.delete, color: Colors.red),
                       onPressed: () {
