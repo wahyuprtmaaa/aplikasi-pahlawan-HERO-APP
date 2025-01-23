@@ -21,54 +21,84 @@ class HomePage extends StatelessWidget {
           ),
         ),
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                'APLIKASI NAMA PAHLAWAN',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Color(0xFF4A6572)),
-              ),
-              const SizedBox(height: 16),
-              const Text(
-                'Aplikasi ini memungkinkan Anda untuk melihat dan menambahkan informasi mengenai pahlawan.',
-                style: TextStyle(fontSize: 18, color: Color(0xFF4A6572)),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 40),
-              ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HeroListPage()),
-                  );
-                },
-                icon: const Icon(Icons.list, color: Colors.white),
-                label: const Text('Lihat Daftar Pahlawan', style: TextStyle(color: Colors.white)),
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                  backgroundColor: const Color(0xFF607D8B),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                  textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  'APLIKASI NAMA PAHLAWAN',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF4A6572),
+                    letterSpacing: 1.2,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 20),
-              ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const AddHeroPage()),
-                  );
-                },
-                icon: const Icon(Icons.add, color: Colors.white),
-                label: const Text('Tambah Pahlawan', style: TextStyle(color: Colors.white)),
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                  backgroundColor: const Color(0xFF4A6572),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                  textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                const SizedBox(height: 16),
+                const Text(
+                  'Aplikasi ini memungkinkan Anda untuk melihat dan menambahkan informasi mengenai pahlawan.',
+                  style: TextStyle(fontSize: 18, color: Color(0xFF4A6572)),
+                  textAlign: TextAlign.center,
                 ),
-              ),
-            ],
+                const SizedBox(height: 40),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const HeroListPage()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF607D8B),
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    elevation: 5,
+                  ),
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.list, color: Colors.white),
+                      SizedBox(width: 10),
+                      Text(
+                        'Lihat Daftar Pahlawan',
+                        style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const AddHeroPage()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF4A6572),
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    elevation: 5,
+                  ),
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.add, color: Colors.white),
+                      SizedBox(width: 10),
+                      Text(
+                        'Tambah Pahlawan',
+                        style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
