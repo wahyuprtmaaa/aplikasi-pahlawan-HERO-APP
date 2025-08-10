@@ -1,16 +1,35 @@
-# pahlawan
+# ​​​​ Hero App (Aplikasi Pahlawan) – Flutter Project
 
-A new Flutter project.
+**Hero App** adalah aplikasi Flutter sederhana sebagai aplikasi percontohan tentang karakter pahlawan.  
+'Hero App' dapat digunakan sebagai dasar untuk pengenalan Flutter, navigasi sederhana, atau daftar karakter.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+##  Fitur Utama
+- Menampilkan daftar pahlawan dalam bentuk kartu.
+- Klik pahlawan untuk melihat detail seperti nama, deskripsi, dan gambar.
+- Navigasi antar layar menggunakan Flutter Navigator.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+##  Tech Stack
+- **Flutter 3.x+**
+- Bahasa: **Dart**
+- Desain UI: `ListView`, `Card`, `Navigator`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+##  Instalasi dan Penggunaan
+
+Ikuti langkah-langkah berikut untuk menjalankan aplikasi ini di perangkat lokal atau emulator:
+
+```bash
+# 1. Clone repository
+git clone https://github.com/wahyuprtmaaa/aplikasi-pahlawan-HERO-APP.git
+cd aplikasi-pahlawan-HERO-APP
+
+# 2. Install dependencies
+flutter pub get
+
+# 3. Jalankan aplikasi
+flutter run
